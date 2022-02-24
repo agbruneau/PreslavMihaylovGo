@@ -10,7 +10,6 @@ import (
 
 func main() {
 	r := bufio.NewReader(os.Stdin)
-
 	line, err := r.ReadString('\n')
 	if err != nil {
 		panic(err)
