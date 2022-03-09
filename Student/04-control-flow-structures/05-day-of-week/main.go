@@ -14,16 +14,18 @@ func main() {
 func lire(s string) int {
 	var line string
 	fmt.Print(s)
-	fmt.Scanln(&line)
-	n, err := strconv.Atoi(strings.TrimSpace(line))
-	erreur(err)
-	return n
-}
 
-func erreur(err error) {
+	if _, err := fmt.Scanln(&line); err != nil {
+		panic(err)
+	}
+
+	n, err := strconv.Atoi(strings.TrimSpace(line))
+
 	if err != nil {
 		panic(err)
 	}
+
+	return n
 }
 
 func dayOfWeek(index int) {
