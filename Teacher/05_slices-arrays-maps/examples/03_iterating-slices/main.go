@@ -5,6 +5,8 @@ import "fmt"
 func main() {
 	numbers := []int{1, 2, 3, 4}
 
+	fmt.Println(numbers)
+
 	// You can use a normal for-loop with three variables
 	// to iterate a slice
 	for i := 0; i < len(numbers); i++ {
